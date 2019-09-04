@@ -10,8 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    //cardButtons.count
-    var game = Concentration(numberOfPairOfCards: 4 / 2)
+    //cardButtons.count!!! add lazy const
+   lazy var game: Concentration = Concentration(numberOfPairOfCards: cardButtons.count / 2)
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        // Do any additional setup after loading the view.
@@ -58,9 +58,14 @@ class ViewController: UIViewController {
         }
     }
     
-    //var emojiChoies = ["🤣","😎","🤣","😎"]
+    var emojiChoies = ["🤣","😍","🥳","😎","🥶","😈","🐶","👻"]
+    var emoji = Dictionary<Int,String>()
     func emoji(for card: Card)-> String {
-        return "?"
+        if emoji[card.identifier] == nil,emojiChoies.count > 0{
+            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoies.count)))
+            emoji[card.identifier] = emojiChoies.remove(at: randomIndex)
+        }
+        return emoji[card.identifier] ?? "?"
     }
 
 }

@@ -25,7 +25,7 @@
                                     <constraint firstAttribute="width" constant="92" id="a75-oM-Yc2"/>
                                     <constraint firstAttribute="height" constant="132" id="n6o-gc-46M"/>
                                 </constraints>
-                                <state key="normal" title="🤣"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xwr-Ds-leE"/>
                                 </connections>
@@ -36,7 +36,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="ZVz-PV-DJB"/>
                                 </constraints>
-                                <state key="normal" title="😎"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="H9q-Bx-EiY"/>
                                 </connections>
@@ -44,7 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kwk-19-rjd">
                                 <rect key="frame" x="272" y="462" width="92" height="132"/>
                                 <color key="backgroundColor" red="1" green="0.57810515169999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <state key="normal" title="😎"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JKv-rQ-fH4"/>
                                 </connections>
@@ -55,17 +55,17 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="132" id="28a-4y-pWK"/>
                                 </constraints>
-                                <state key="normal" title="🤣"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <connections>
                                     <action selector="btnClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Y2F-Ec-MpC"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips:0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-yz-iFu">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Flips:0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LsS-yz-iFu">
                                 <rect key="frame" x="164" y="59" width="130" height="47"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="47" id="qFf-cF-meu"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>

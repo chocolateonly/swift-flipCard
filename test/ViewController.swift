@@ -18,7 +18,7 @@ class ViewController: UIViewController {
 //    }
     
 
-   @IBOutlet weak var flipsLabel: UILabel!
+    @IBOutlet weak var flipsLabel: UILabel!
     
     var flipsBtnNumber = 0 {
         didSet{
@@ -30,10 +30,11 @@ class ViewController: UIViewController {
     
 
     @IBAction func btnClick(_ sender: UIButton) {
-        flipsBtnNumber += 1
-       
         if let cardNumber = cardButtons.firstIndex(of: sender){
             //print(cardNumber)
+            if !game.cards[cardNumber].isMatched{
+                 flipsBtnNumber += 1
+            }
             game.chooseCard(at: cardNumber)
             updateViewFromModel()
         }

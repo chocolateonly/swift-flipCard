@@ -60,13 +60,13 @@ class ViewController: UIViewController {
     }
     
     var emojiChoies = ["🤣","😍","🥳","😎","🥶","😈","🐶","👻"]
-    var emoji = Dictionary<Int,String>()
+    var emoji = Dictionary<Card,String>()
     func emoji(for card: Card)-> String {
-        if emoji[card.identifier] == nil,emojiChoies.count > 0{
+        if emoji[card] == nil,emojiChoies.count > 0{
             let randomIndex = Int(arc4random_uniform(UInt32(emojiChoies.count)))
-            emoji[card.identifier] = emojiChoies.remove(at: randomIndex)
+            emoji[card] = emojiChoies.remove(at: randomIndex)
         }
-        return emoji[card.identifier] ?? "?"
+        return emoji[card] ?? "?"
     }
 
 }

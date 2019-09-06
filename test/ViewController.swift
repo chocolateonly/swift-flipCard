@@ -59,15 +59,28 @@ class ViewController: UIViewController {
         }
     }
     
-    var emojiChoies = ["🤣","😍","🥳","😎","🥶","😈","🐶","👻"]
+    //var emojiChoies = ["🤣","😍","🥳","😎","🥶","😈","🐶","👻"]
+    var emojiChoies = "🤣😍🥳😎🥶😈🐶👻"
     var emoji = Dictionary<Card,String>()
     func emoji(for card: Card)-> String {
         if emoji[card] == nil,emojiChoies.count > 0{
-            let randomIndex = Int(arc4random_uniform(UInt32(emojiChoies.count)))
-            emoji[card] = emojiChoies.remove(at: randomIndex)
+            let randomStringIndex = emojiChoies.index(emojiChoies.startIndex, offsetBy: emojiChoies.count.arc4random)
+            emoji[card] = String(emojiChoies.remove(at: randomStringIndex))
         }
         return emoji[card] ?? "?"
     }
 
 }
 
+extension Int{
+    var arc4random: Int{
+        if self > 0{
+            return Int(arc4random_uniform(UInt32(self)))
+            
+        } else if self < 0{
+            return -Int(arc4random_uniform(UInt32(abs(self))))
+        }
+        return 0
+    }
+
+}
